@@ -142,7 +142,7 @@
                     <navigationItem key="navigationItem" id="kEU-86-AmQ">
                         <barButtonItem key="rightBarButtonItem" title="Add" id="dzf-30-mv8">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="Fbg-hU-qz5"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="add" id="Fbg-hU-qz5"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

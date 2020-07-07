@@ -40,8 +40,10 @@ class PeopleTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let viewController = segue.destination as? PersonDetailsViewController {
-            viewController.tableViewController = self
+        if segue.identifier == "add"{
+            if let viewController = segue.destination as? PersonDetailsViewController {
+                viewController.tableViewController = self
+            }
         }
     }
 
