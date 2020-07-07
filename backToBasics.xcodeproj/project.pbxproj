@@ -9,21 +9,28 @@
 /* Begin PBXBuildFile section */
 		AA1E72FE24B240150083FC8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1E72FD24B240150083FC8D /* AppDelegate.swift */; };
 		AA1E730024B240150083FC8D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1E72FF24B240150083FC8D /* SceneDelegate.swift */; };
-		AA1E730224B240150083FC8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1E730124B240150083FC8D /* ViewController.swift */; };
+		AA1E730224B240150083FC8D /* PersonDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1E730124B240150083FC8D /* PersonDetailsViewController.swift */; };
 		AA1E730524B240150083FC8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA1E730324B240150083FC8D /* Main.storyboard */; };
 		AA1E730724B240170083FC8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA1E730624B240170083FC8D /* Assets.xcassets */; };
 		AA1E730A24B240170083FC8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA1E730824B240170083FC8D /* LaunchScreen.storyboard */; };
+		AA1E731324B262320083FC8D /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1E731224B262320083FC8D /* Address.swift */; };
+		AA1E731524B262720083FC8D /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1E731424B262720083FC8D /* Person.swift */; };
+		AA1E731A24B270230083FC8D /* PeopleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1E731924B270230083FC8D /* PeopleTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AA1E72FA24B240150083FC8D /* backToBasics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = backToBasics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA1E72FD24B240150083FC8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA1E72FF24B240150083FC8D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AA1E730124B240150083FC8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AA1E730124B240150083FC8D /* PersonDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsViewController.swift; sourceTree = "<group>"; };
 		AA1E730424B240150083FC8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AA1E730624B240170083FC8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA1E730924B240170083FC8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA1E730B24B240170083FC8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA1E731124B248B90083FC8D /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = "../../../../Library/Autosave Information/MyPlayground.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		AA1E731224B262320083FC8D /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		AA1E731424B262720083FC8D /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		AA1E731924B270230083FC8D /* PeopleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +64,42 @@
 			isa = PBXGroup;
 			children = (
 				AA1E72FD24B240150083FC8D /* AppDelegate.swift */,
+				AA1E731624B262C60083FC8D /* Models */,
+				AA1E731724B262D80083FC8D /* Controllers */,
+				AA1E731824B262FE0083FC8D /* Views */,
 				AA1E72FF24B240150083FC8D /* SceneDelegate.swift */,
-				AA1E730124B240150083FC8D /* ViewController.swift */,
-				AA1E730324B240150083FC8D /* Main.storyboard */,
 				AA1E730624B240170083FC8D /* Assets.xcassets */,
+				AA1E731124B248B90083FC8D /* MyPlayground.playground */,
 				AA1E730824B240170083FC8D /* LaunchScreen.storyboard */,
 				AA1E730B24B240170083FC8D /* Info.plist */,
 			);
 			path = backToBasics;
+			sourceTree = "<group>";
+		};
+		AA1E731624B262C60083FC8D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AA1E731224B262320083FC8D /* Address.swift */,
+				AA1E731424B262720083FC8D /* Person.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AA1E731724B262D80083FC8D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AA1E730124B240150083FC8D /* PersonDetailsViewController.swift */,
+				AA1E731924B270230083FC8D /* PeopleTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AA1E731824B262FE0083FC8D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AA1E730324B240150083FC8D /* Main.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +173,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA1E730224B240150083FC8D /* ViewController.swift in Sources */,
+				AA1E731524B262720083FC8D /* Person.swift in Sources */,
+				AA1E730224B240150083FC8D /* PersonDetailsViewController.swift in Sources */,
 				AA1E72FE24B240150083FC8D /* AppDelegate.swift in Sources */,
+				AA1E731324B262320083FC8D /* Address.swift in Sources */,
+				AA1E731A24B270230083FC8D /* PeopleTableViewController.swift in Sources */,
 				AA1E730024B240150083FC8D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
