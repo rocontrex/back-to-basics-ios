@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PeopleTableViewController: UITableViewController {
+class PeopleTableViewController: UITableViewController, ViewControllerDelegate {
     
     var people = [Person(name: "Rodrigo", email: "teste@email.com", age: 24),
                   Person(name: "Aline", email: "teste@email.com", age: 24),
@@ -42,7 +42,7 @@ class PeopleTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "add"{
             if let viewController = segue.destination as? PersonDetailsViewController {
-                viewController.tableViewController = self
+                viewController.delegate = self
             }
         }
     }

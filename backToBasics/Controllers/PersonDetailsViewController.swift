@@ -8,9 +8,13 @@
 
 import UIKit
 
+protocol ViewControllerDelegate {
+    func addNewPerson(_ person: Person)
+}
+
 class PersonDetailsViewController: UIViewController {
     
-    var tableViewController: PeopleTableViewController?
+    var delegate: ViewControllerDelegate?
     
     @IBOutlet weak var nameTextField: UITextField?
     @IBOutlet weak var emailTextField: UITextField?
@@ -36,7 +40,7 @@ class PersonDetailsViewController: UIViewController {
         }
         
         let person = Person(name: name, email: email, age: int_age)
-        tableViewController?.addNewPerson(person)
+        delegate?.addNewPerson(person)
         
         navigationController?.popViewController(animated: true)
     
