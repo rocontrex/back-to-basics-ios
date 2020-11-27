@@ -17,6 +17,8 @@
 		AA1E731524B262720083FC8D /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1E731424B262720083FC8D /* Person.swift */; };
 		AA1E731A24B270230083FC8D /* PeopleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1E731924B270230083FC8D /* PeopleTableViewController.swift */; };
 		AA4AB03B257076BE00197B64 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4AB03A257076BE00197B64 /* Course.swift */; };
+		AA4AB03E25707D8100197B64 /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4AB03C25707D8100197B64 /* AddUserViewController.swift */; };
+		AA4AB03F25707D8100197B64 /* AddUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA4AB03D25707D8100197B64 /* AddUserViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		AA1E731424B262720083FC8D /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		AA1E731924B270230083FC8D /* PeopleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableViewController.swift; sourceTree = "<group>"; };
 		AA4AB03A257076BE00197B64 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		AA4AB03C25707D8100197B64 /* AddUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
+		AA4AB03D25707D8100197B64 /* AddUserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddUserViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 			children = (
 				AA1E730124B240150083FC8D /* PersonDetailsViewController.swift */,
 				AA1E731924B270230083FC8D /* PeopleTableViewController.swift */,
+				AA4AB03C25707D8100197B64 /* AddUserViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -101,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				AA1E730324B240150083FC8D /* Main.storyboard */,
+				AA4AB03D25707D8100197B64 /* AddUserViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -164,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA1E730A24B240170083FC8D /* LaunchScreen.storyboard in Resources */,
+				AA4AB03F25707D8100197B64 /* AddUserViewController.xib in Resources */,
 				AA1E730724B240170083FC8D /* Assets.xcassets in Resources */,
 				AA1E730524B240150083FC8D /* Main.storyboard in Resources */,
 			);
@@ -181,6 +188,7 @@
 				AA1E730224B240150083FC8D /* PersonDetailsViewController.swift in Sources */,
 				AA1E72FE24B240150083FC8D /* AppDelegate.swift in Sources */,
 				AA1E731324B262320083FC8D /* Address.swift in Sources */,
+				AA4AB03E25707D8100197B64 /* AddUserViewController.swift in Sources */,
 				AA1E731A24B270230083FC8D /* PeopleTableViewController.swift in Sources */,
 				AA1E730024B240150083FC8D /* SceneDelegate.swift in Sources */,
 			);

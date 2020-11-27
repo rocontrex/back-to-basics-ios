@@ -107,6 +107,7 @@
                     <navigationItem key="navigationItem" id="w92-pG-Sf1"/>
                     <connections>
                         <outlet property="ageTextField" destination="UQ7-G4-VdW" id="Xsz-YD-H9Q"/>
+                        <outlet property="coursesTableView" destination="r85-Qa-22Q" id="6qW-Zf-sXG"/>
                         <outlet property="emailTextField" destination="uGM-Yy-5Q9" id="WU7-U4-mrt"/>
                         <outlet property="nameTextField" destination="GTa-Ph-lHu" id="gaR-Ru-WOw"/>
                     </connections>

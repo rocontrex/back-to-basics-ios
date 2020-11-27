@@ -12,10 +12,15 @@ protocol ViewControllerDelegate {
     func addNewPerson(_ person: Person)
 }
 
-class PersonDetailsViewController: UIViewController {
+class PersonDetailsViewController: UIViewController, AddNewCourseDelegate {
+    //MARK: - Delegates
+    func addCouse(_ course: Course) {
+        courses.append(course)
+        coursesTableView.reloadData()
+    }
     // MARK: - Atributos
     var delegate: ViewControllerDelegate?
-    let courses: [Course] = [
+    var courses: [Course] = [
         Course(name: "Python 3", details: "A long course of python language", price: "R$5000.00"),
         Course(name: "Android 20", details: "One more and will rest only 298", price: "R$2.00"),
         Course(name: "iOS to dumbs", details: "Only to dumbs", price: "R$10.00")
@@ -25,6 +30,7 @@ class PersonDetailsViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField?
     @IBOutlet weak var emailTextField: UITextField?
     @IBOutlet weak var ageTextField: UITextField?
+    @IBOutlet weak var coursesTableView: UITableView!
     // MARK: - Actions
     @IBAction func add(_ sender: Any) {
         
@@ -54,6 +60,16 @@ class PersonDetailsViewController: UIViewController {
         
     }
     
+    // MARK: - View life cycle
+    override func viewDidLoad() {
+        let buttonAddPerson = UIBarButtonItem(title: "New Course", style: .plain, target: self, action: #selector(addNewUser))
+        navigationItem.rightBarButtonItem = buttonAddPerson
+    }
+    
+    @objc func addNewUser() {
+        let addUserViewController = AddUserViewController(delegate: self)
+        navigationController?.pushViewController(addUserViewController, animated: true)
+    }
 }
 // MARK: - Table View DataSource
 extension PersonDetailsViewController: UITableViewDataSource {
@@ -79,8 +95,8 @@ extension PersonDetailsViewController: UITableViewDelegate {
             selectedCourses.append(courses[clickedItemRow])
         } else {
             cell.accessoryType = .none
-            let selectedCourse = courses[indexPath.row]
-            if let position = courses.firstIndex(of: selectedCourse) {
+            let course = courses[indexPath.row]
+            if let position = selectedCourses.firstIndex(of: course) {
                 selectedCourses.remove(at: position)
             }
         }
