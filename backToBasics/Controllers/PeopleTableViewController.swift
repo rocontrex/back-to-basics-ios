@@ -31,7 +31,19 @@ class PeopleTableViewController: UITableViewController, ViewControllerDelegate {
         let person = people[indexPath.row]
         cell.textLabel?.text = person.name
         
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(showDetail(_:)))
+        cell.addGestureRecognizer(longPress)
+        
         return cell
+    }
+    
+    @objc func showDetail(_ gesture: UILongPressGestureRecognizer){
+        if gesture.state == .began {
+            let cell = gesture.view as! UITableViewCell
+            guard let indexPath = tableView.indexPath(for: cell) else { return }
+            let person = people[indexPath.row]
+            print(person.name)
+        }
     }
     
     func addNewPerson(_ person: Person){
