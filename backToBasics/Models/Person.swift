@@ -13,11 +13,13 @@ class Person: NSObject {
     let email: String
     let age: Int
     var Address: Array<Address> = []
+    var courses: Array<Course> = []
     
-    init(name: String, email: String, age: Int) {
+    init(name: String, email: String, age: Int, courses: [Course] = []) {
         self.name = name
         self.email = email
         self.age = age
+        self.courses = courses
     }
     
 }
