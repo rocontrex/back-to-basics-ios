@@ -19,6 +19,7 @@
 		AA4AB03B257076BE00197B64 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4AB03A257076BE00197B64 /* Course.swift */; };
 		AA4AB03E25707D8100197B64 /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4AB03C25707D8100197B64 /* AddUserViewController.swift */; };
 		AA4AB03F25707D8100197B64 /* AddUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA4AB03D25707D8100197B64 /* AddUserViewController.xib */; };
+		AA62B63B2572FEA40019DECB /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA62B63A2572FEA40019DECB /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		AA4AB03A257076BE00197B64 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		AA4AB03C25707D8100197B64 /* AddUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
 		AA4AB03D25707D8100197B64 /* AddUserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddUserViewController.xib; sourceTree = "<group>"; };
+		AA62B63A2572FEA40019DECB /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				AA1E731224B262320083FC8D /* Address.swift */,
 				AA1E731424B262720083FC8D /* Person.swift */,
 				AA4AB03A257076BE00197B64 /* Course.swift */,
+				AA62B63A2572FEA40019DECB /* Alert.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA62B63B2572FEA40019DECB /* Alert.swift in Sources */,
 				AA4AB03B257076BE00197B64 /* Course.swift in Sources */,
 				AA1E731524B262720083FC8D /* Person.swift in Sources */,
 				AA1E730224B240150083FC8D /* PersonDetailsViewController.swift in Sources */,
@@ -335,13 +339,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 683FZRRUQW;
+				DEVELOPMENT_TEAM = 9GP3MC4W78;
 				INFOPLIST_FILE = backToBasics/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.rodrigo.backToBasics;
+				PRODUCT_BUNDLE_IDENTIFIER = br.conte.backToBasics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -353,13 +357,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 683FZRRUQW;
+				DEVELOPMENT_TEAM = 9GP3MC4W78;
 				INFOPLIST_FILE = backToBasics/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.rodrigo.backToBasics;
+				PRODUCT_BUNDLE_IDENTIFIER = br.conte.backToBasics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

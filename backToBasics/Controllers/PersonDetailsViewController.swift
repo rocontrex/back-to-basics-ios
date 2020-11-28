@@ -64,11 +64,19 @@ class PersonDetailsViewController: UIViewController, AddNewCourseDelegate {
     override func viewDidLoad() {
         let buttonAddPerson = UIBarButtonItem(title: "New Course", style: .plain, target: self, action: #selector(addNewUser))
         navigationItem.rightBarButtonItem = buttonAddPerson
+        
+        setup()
     }
     
     @objc func addNewUser() {
         let addUserViewController = AddUserViewController(delegate: self)
         navigationController?.pushViewController(addUserViewController, animated: true)
+    }
+    
+    func setup() {
+        nameTextField?.delegate = self
+        emailTextField?.delegate = self
+        ageTextField?.delegate = self
     }
 }
 // MARK: - Table View DataSource
@@ -103,3 +111,10 @@ extension PersonDetailsViewController: UITableViewDelegate {
     }
 }
 
+// MARK: - TextField Delegate
+
+extension PersonDetailsViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+    }
+}

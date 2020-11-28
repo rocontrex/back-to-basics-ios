@@ -43,9 +43,7 @@ class AddUserViewController: UIViewController {
         guard let price = priceField.text else { return }
         
         let course = Course(name: name, details: detail, price: price)
-        if let delegate = self.delegate {
-            delegate.addCouse(course)
-        }
+        delegate?.addCouse(course)
         navigationController?.popViewController(animated: true)
     }
 }

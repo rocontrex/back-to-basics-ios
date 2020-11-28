@@ -22,4 +22,14 @@ class Person: NSObject {
         self.courses = courses
     }
     
+    func detail() -> String {
+        var details = "Courses: "
+        
+        for course in self.courses {
+            details += "Name: \(course.name) \n"
+        }
+        
+        return details
+    }
+    
 }

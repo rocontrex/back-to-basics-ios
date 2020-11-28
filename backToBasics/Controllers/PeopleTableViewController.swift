@@ -33,7 +33,6 @@ class PeopleTableViewController: UITableViewController, ViewControllerDelegate {
         
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(showDetail(_:)))
         cell.addGestureRecognizer(longPress)
-        
         return cell
     }
     
@@ -42,14 +41,23 @@ class PeopleTableViewController: UITableViewController, ViewControllerDelegate {
             let cell = gesture.view as! UITableViewCell
             guard let indexPath = tableView.indexPath(for: cell) else { return }
             let person = people[indexPath.row]
-            print(person.name)
+            
+            showAlertDetail(person)
         }
+    }
+    
+    // MARK: - Functions
+    
+    func showAlertDetail(_ person: Person) {
+        Alert(viewController: self).show(title: person.name, message: person.detail())
     }
     
     func addNewPerson(_ person: Person){
         people.append(person)
         tableView.reloadData()
     }
+    
+    // MARK: - Segue process
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "add"{
@@ -58,6 +66,4 @@ class PeopleTableViewController: UITableViewController, ViewControllerDelegate {
             }
         }
     }
-
-
 }
